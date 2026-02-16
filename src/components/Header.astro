@@ -3,17 +3,25 @@ import NavLink from "@/components/NavLink.astro";
 ---
 
 <header class="w-full">
-  <nav class="flex flex-row justify-between" aria-label="Main navigation">
-    <div class="flex gap-2 items-center">
-      <a href="/" aria-label="Home">
-        <p class="text-2xl font-semibold">#!</p>
-      </a>
-      {/* <ThemeToggle /> */}
-    </div>
-    <div class="flex gap-6 items-center justify-end">
-      <NavLink href="/posts" ariaLabel="Posts">Posts</NavLink>
-      <NavLink href="/tags" ariaLabel="Tags">Tags</NavLink>
-      <NavLink href="/search" ariaLabel="Search">Search</NavLink>
-    </div>
+  <nav aria-label="Main navigation">
+    <ul class="flex gap-4 items-center px-6">
+      <li>
+        <NavLink
+          href="/"
+          ariaLabel="Home"
+          class="flex before:content-['['] after:content-[']_$'] p-1 bg-green-600 text-neutral-800 hover:bg-green-500"
+          >dhemasnurjaya</NavLink
+        >
+      </li>
+      <li class="flex before:content-['./'] before:text-neutral-500">
+        <NavLink href="/posts" ariaLabel="Posts">posts</NavLink>
+      </li>
+      <li class="flex before:content-['./'] before:text-neutral-500">
+        <NavLink href="/tags" ariaLabel="Tags">tags</NavLink>
+      </li>
+      <li class="flex before:content-['./'] before:text-neutral-500">
+        <NavLink href="/search" ariaLabel="Search">search</NavLink>
+      </li>
+    </ul>
   </nav>
 </header>
