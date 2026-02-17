@@ -1,6 +1,10 @@
 services:
-  web:
+  site-server:
     build: .
-    ports:
-      - "8080:80"
     restart: unless-stopped
+    networks:
+      - traefik-proxy
+
+networks:
+  traefik-proxy:
+    external: true
