@@ -9,5 +9,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [expressiveCode()]
+  integrations: [expressiveCode()],
 });

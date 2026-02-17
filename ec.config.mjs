@@ -1,11 +1,11 @@
-import { defineEcConfig } from 'astro-expressive-code'
+import { defineEcConfig } from "astro-expressive-code";
 
 export default defineEcConfig({
-  themes: ['dark-plus'],
+  themes: ["dark-plus"],
   styleOverrides: {
-    borderRadius: '0rem',
+    borderRadius: "0rem",
     frames: {
-      shadowColor: 'transparent',
-    }
+      shadowColor: "transparent",
+    },
   },
-})
+});
