@@ -1,7 +1,7 @@
 # Variables
 $remoteUser = "dhemas"
 $remoteHost = "dhemasnurjaya.com"
-$remoteDir = "/home/dhemas/apps/blog/public/"
+$remoteDir = "/home/dhemas/apps/site/public/"
 $localDir = "dist/"
 $keyPath = "D:\Secrets\giocloud-default.ppk"
 $winscpExecutable = "C:\Users\dhemas\AppData\Local\Programs\WinSCP\WinSCP.com"  # Update this if needed
