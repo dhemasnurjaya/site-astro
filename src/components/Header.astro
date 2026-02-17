@@ -1,26 +1,26 @@
 ---
-import NavLink from "@/components/NavLink.astro";
+import Link from "@/components/Link.astro";
 ---
 
 <header class="w-full">
   <nav aria-label="Main navigation">
     <ul class="flex gap-4 items-center px-6">
       <li>
-        <NavLink
+        <a
           href="/"
-          ariaLabel="Home"
-          class="flex before:content-['['] after:content-[']_$'] p-1 bg-green-600 text-neutral-800 hover:bg-green-500"
-          >dhemasnurjaya</NavLink
+          aria-label="Home"
+          class="flex before:content-['['] after:content-[']_#'] p-1 bg-green-600 text-neutral-800 hover:bg-green-500 transition-colors"
+          >dhemasnurjaya</a
         >
       </li>
       <li class="flex before:content-['./'] before:text-neutral-500">
-        <NavLink href="/posts" ariaLabel="Posts">posts</NavLink>
+        <Link href="/posts" ariaLabel="Posts">posts</Link>
       </li>
       <li class="flex before:content-['./'] before:text-neutral-500">
-        <NavLink href="/tags" ariaLabel="Tags">tags</NavLink>
+        <Link href="/tags" ariaLabel="Tags">tags</Link>
       </li>
       <li class="flex before:content-['./'] before:text-neutral-500">
-        <NavLink href="/search" ariaLabel="Search">search</NavLink>
+        <Link href="/search" ariaLabel="Search">search</Link>
       </li>
     </ul>
   </nav>

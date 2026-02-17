@@ -1,33 +1,59 @@
 ---
-import NavLink from "./NavLink.astro";
+import PageTitle from "@/components/PageTitle.astro";
+import SocialLink from "@/components/SocialLink.astro";
+import Linkedin from "@/assets/images/linkedin.svg";
+import Github from "@/assets/images/github.svg";
+import Twitter from "@/assets/images/twitter.svg";
+import Facebook from "@/assets/images/facebook.svg";
+import Mail from "@/assets/images/at-sign.svg";
 ---
 
 <div class="flex flex-col">
-  <p class="font-bold">Welcome!</p>
-  <ul aria-label="social links">
-    <li>
-      <NavLink
-        href="https://www.linkedin.com/in/dhemas-nurjaya-030890bb"
-        ariaLabel="Linkedin">Linkedin</NavLink
-      >
-    </li>
-    <li>
-      <NavLink href="https://github.com/dhemasnurjaya" ariaLabel="Github"
-        >Github</NavLink
-      >
-    </li>
-    <li>
-      <NavLink href="https://x.com/dhemaseka" ariaLabel="X">X</NavLink>
-    </li>
-    <li>
-      <NavLink href="https://www.facebook.com/Dhemas" ariaLabel="Facebook"
-        >Facebook</NavLink
-      >
-    </li>
-    <li>
-      <NavLink href="mailto:dhemasnurjaya@gmail.com" ariaLabel="Email"
-        >Email</NavLink
-      >
-    </li>
-  </ul>
+  <PageTitle title="Hi, I'm Dhemas 👋" />
+  <p class="mb-4">
+    Cross-platform developer. Linux fan stuck on Windows. Craftsman at heart.
+  </p>
+  <p class="mb-4">
+    I write about building apps, learning new tech, and the occasional
+    existential crisis that comes with debugging production code. This is where
+    I share what I'm working on, what I'm learning, and thoughts that don't fit
+    in a commit message.
+  </p>
+  <p class="mb-4">
+    Currently working at a local startup where "full-stack" means Flutter 📱,
+    Spring ☕, and React Router 🌐—sometimes all in the same day. I follow The
+    Craftsman's Way: quality is not negotiable. Clean Architecture, TDD, and DDD
+    aren't just buzzwords here; they're how I try to keep my sanity intact.
+  </p>
+  <p class="mb-4">
+    Also, I built this blog with Astro ⚡ because life's too short for slow
+    websites.
+  </p>
+  <p class="mb-8">
+    Stick around if you're into cross-platform dev, software craftsmanship, or
+    just want to see someone figure things out in public. 🚀
+  </p>
+  <div class="flex gap-6 items-center" aria-label="social links">
+    <SocialLink
+      href="https://www.linkedin.com/in/dhemas-nurjaya-030890bb"
+      label="Linkedin"
+      icon={Linkedin}
+    />
+    <SocialLink
+      href="https://github.com/dhemasnurjaya"
+      label="Github"
+      icon={Github}
+    />
+    <SocialLink href="https://x.com/dhemaseka" label="X" icon={Twitter} />
+    <SocialLink
+      href="https://www.facebook.com/Dhemas"
+      label="Facebook"
+      icon={Facebook}
+    />
+    <SocialLink
+      href="mailto:dhemasnurjaya@gmail.com"
+      label="Email"
+      icon={Mail}
+    />
+  </div>
 </div>

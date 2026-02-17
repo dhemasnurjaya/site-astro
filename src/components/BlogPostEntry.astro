@@ -1,5 +1,5 @@
 ---
-import NavLink from "@/components/NavLink.astro";
+import Link from "@/components/Link.astro";
 
 interface Props {
   id: string;
@@ -12,9 +12,9 @@ const { id, date, title, description } = Astro.props;
 ---
 
 <div>
-  <NavLink href={`/posts/${id}`}>
+  <Link href={`/posts/${id}`}>
     <h2 class="text-lg font-semibold">{title}</h2>
-  </NavLink>
+  </Link>
   <div class="flex items-center text-neutral-500 text-sm">
     {
       date.toLocaleDateString("en-US", {

@@ -7,7 +7,7 @@ import {
 } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Tag from "@/components/Tag.astro";
-import MarkdownRenderer from "@/components/MarkdownRenderer.astro";
+import Markdown from "@/components/Markdown.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -39,9 +39,9 @@ const { post, content } = Astro.props;
 >
   <article>
     <header class="mb-12">
-      <h1 class="text-3xl font-bold mb-2">{post.data.title}</h1>
-      <h2 class="text-lg mb-2">{post.data.description}</h2>
-      <div class="flex gap-4 text-gray-600 text-sm">
+      <h1 class="text-2xl font-bold mb-2">{post.data.title}</h1>
+      <h2 class="text-base mb-2">{post.data.description}</h2>
+      <div class="flex gap-4 text-neutral-500 text-sm">
         <time datetime={new Date(post.data.date).toISOString()}>
           {
             post.data.date.toLocaleDateString("en-US", {
@@ -54,9 +54,9 @@ const { post, content } = Astro.props;
       </div>
     </header>
 
-    <MarkdownRenderer>
+    <Markdown>
       <content.Content />
-    </MarkdownRenderer>
+    </Markdown>
 
     <ul class="flex flex-wrap gap-2">
       {

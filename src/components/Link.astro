@@ -10,7 +10,7 @@ const { href, ariaLabel, class: className } = Astro.props;
 
 <a
   href={href}
-  class={`hover:underline underline-offset-4 ${className ?? ""}`}
+  class={`text-emerald-300 hover:text-emerald-500 transition-colors underline underline-offset-4 ${className ?? ""}`}
   aria-label={ariaLabel}
 >
   <slot />
