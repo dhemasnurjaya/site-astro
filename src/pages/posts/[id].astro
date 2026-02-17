@@ -37,7 +37,7 @@ const { post, content } = Astro.props;
   title={`${post.data.title} - Dhemas Nurjaya`}
   description={post.data.description}
 >
-  <article>
+  <article data-pagefind-body>
     <header class="mb-12">
       <h1 class="text-2xl font-bold mb-2">{post.data.title}</h1>
       <h2 class="text-base mb-2">{post.data.description}</h2>
